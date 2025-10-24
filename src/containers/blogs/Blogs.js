@@ -12,6 +12,7 @@ export default function Blogs() {
   }
   //Medium API returns blogs' content in HTML format. Below function extracts blogs' text content within paragraph tags
   function extractTextContent(html) {
+    console.log(html)
     return typeof html === "string"
       ? html
           .split(/<\/p>/i)

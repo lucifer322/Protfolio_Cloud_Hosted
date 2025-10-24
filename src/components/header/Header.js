@@ -32,6 +32,7 @@ function Header() {
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
         </a>
+     
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label
           className="menu-icon"
@@ -40,6 +41,7 @@ function Header() {
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
+        
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
@@ -87,6 +89,7 @@ function Header() {
           </li>
         </ul>
       </header>
+      {isDark ? "":(<h4 className="Head-instruction">Please toggle to night mode for more emmersive experience.</h4>)};
     </Headroom>
   );
 }

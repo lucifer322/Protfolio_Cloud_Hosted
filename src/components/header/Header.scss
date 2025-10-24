@@ -158,7 +158,12 @@
 }
 
 /* 48em = 768px */
-
+ .Head-instruction{
+  font-size: 10px;
+  color: $subTitle;
+  margin-left: 70px;
+  margin-right: 10px;
+}
 @media (min-width: 48em) {
   .header li {
     float: left;
