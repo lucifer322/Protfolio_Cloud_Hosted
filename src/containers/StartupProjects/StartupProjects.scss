@@ -3,7 +3,7 @@
 .card-image {
   max-width: 100%;
   height: auto;
-  width: 250px;
+  width: 100%;
 }
 .card-title {
   color: $titleColor;
@@ -21,34 +21,32 @@
   display: flex;
   flex-direction: column;
   background-color: $lightBackground2;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 .project-card-light {
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .project-card-dark {
   box-shadow: 0px 10px 30px -15px $darkBoxShadow;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.25s ease;
 }
 
-.project-detail {
-  text-align: center;
-}
+
 .project-card-light:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
 }
 .project-card-dark:hover {
   box-shadow: 0px 20px 30px -10px $darkBoxShadow;
 }
+.project-detail {
+  text-align: center;
+}
+
+
 .project-image {
   position: relative;
   height: 250px;
@@ -60,7 +58,7 @@
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem 1rem;
 }
 
@@ -87,4 +85,38 @@
     font-size: 16px;
     text-align: center;
   }
+  .project-card {
+    padding: 0.8rem; /* slightly smaller padding */
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-subtitle {
+    font-size: 15px;
+  }
 }
+
+@media (max-width: 480px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* fallback single column for very small screens */
+  }
+
+  .project-card {
+    width: 100%;
+    padding: 0.6rem; /* reduce padding for small screens */
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-subtitle {
+    font-size: 14px;
+  }
+
+  .project-image {
+    height: auto; /* allow image to scale */
+  }
+  }
