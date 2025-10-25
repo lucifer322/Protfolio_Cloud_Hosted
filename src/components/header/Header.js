@@ -89,7 +89,7 @@ function Header() {
           </li>
         </ul>
       </header>
-      {isDark ? "":(<h4 className="Head-instruction">Please toggle to night mode for more emmersive experience.</h4>)};
+      {isDark ? "":(<h4 className="Head-instruction">Please toggle to night mode for more emmersive experience.</h4>)}
     </Headroom>
   );
 }
